@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array_method</title>
+    <script>
+        const theFood = ['짜장면', '냉면', '갈비탕', '돈까스', '삼겹살'];
+        theFood.reverse();
+        document.write(theFood, '<br>');
+
+        const theSubway = ['2호선', '9호선', '7호선', '4호선', '3호선'];
+        theSubway.sort();
+        document.write(theSubway, '<br>');
+
+        const Mountain1 = ['남산', '도봉산', '관악산', '청계산', '북한산'];
+        const Mountain2 = ['설악산', '지리산', '한라산', '속리산'];
+        const joinResult = Mountain1.concat(Mountain2);
+        document.write(joinResult, '<br>');
+
+        const theName = ['최준호', '이성은', '기오정', '김민경', '정예선'];
+        const result = theName.slice(2,4);
+        document.write(result, '<br>');
+
+        const theProduct = new Array('냉장고', '컴퓨터', '선풍기', '밥솥', '핸드폰');
+        const joinResult2 = theProduct.join('-');
+        document.write(joinResult2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

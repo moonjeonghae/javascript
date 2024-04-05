@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성자 함수</title>
+    <script>
+        function Tv(color, price) {  
+            this.color = color;  //객체 속성 값 설정
+            this.price = price; 
+            this.info = function () {
+                return `tv 색상 : ${this.color}, tv 가격 : ${this.price}`;
+            }
+        };
+
+        document.write("<h1>TV 객체 생성자 함수</h1>")
+        const result = new Tv('black', 50000000);  //객체 생성
+        document.write(result.info(),"<br>");
+        const result2 = new Tv('red', 30000000);  //객체 생성
+        document.write(result2.info());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

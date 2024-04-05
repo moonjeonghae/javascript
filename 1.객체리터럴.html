@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 리터럴</title>
+    <script>
+        var Car = {  // 객체 : 파스칼 기법으로 이름 부여
+            color: "black",  //속성
+            price: 50000000,
+            info: function() {  //info는 메소드
+                document.write("car 색상 : " + this.color, "<br>");  //this는 Car
+                document.write("car 가격 : " + this.price, "<br>");
+            }
+        };
+        document.write('<h1>객체리터럴 호출</h1>');
+        console.log(Car.color, Car["price"]);
+        Car.info();
+
+        Car["make"] = '현대';  //속성 추가
+        console.log(Car.make);
+
+        Car.color = 'red';  //속성 변경
+        console.log(Car.color);
+
+        delete Car.color;  //속성 삭제
+        console.log(Car.color);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

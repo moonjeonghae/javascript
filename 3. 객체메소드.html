@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 메소드</title>
+    <script>
+        // 리터럴 객체는 프로토타입을 만들지 못함
+        // var Circle = {
+        //     center: { x:1, y:2 },
+        //     radius: 2.5,
+        //     area: function() {
+        //         return Math.PI * this.radius * this.radius;
+        //     }
+        // };
+        // console.log(Circle.area());
+
+        // Circle.prototype.translate = function(a,b) {
+        //     this.center.x = this.center.x + a;
+        //     this.center.y = this.center.y + b;
+        // }
+        // colsole.log(Circle.translate(1, 2));
+
+        // 객체 생성자 함수는 프로토타입 만들 수 있음
+        function Circle() {
+            this.center = { x:1, y:2 };
+            this.radius = 2.5;
+            this.area = function() {
+                return Math.PI * this.radius * this.radius;  //원의 넓이 : 반지름*반지름*파이
+            };
+        };
+        
+        Circle.prototype.area = function() {
+            return Math.PI * this.radius * this.radius;
+        }
+        Circle.prototype.translate = function(a,b) {
+            this.center.x = this.center.x + a;
+            this.center.y = this.center.y + b;
+        }
+        const circle = new Circle();
+        circle.translate(3, 4);
+        console.log(circle.center); 
+        console.log(circle.area()); 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

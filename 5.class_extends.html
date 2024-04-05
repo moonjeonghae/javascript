@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class extends</title>
+    <script>
+        class Vehicle {
+            constructor(make, model, color) {
+            this.make = make;
+            this.model = model;
+            this.color = color;
+            }
+            
+            getName() {
+                return `${this.make} ${this.model}`;
+            }
+        }
+
+        // 자식 클래스 Car
+        class Car extends Vehicle {  //extends 키워드 사용
+            getName() {
+                // return `${this.make} ${this.model} in child class`;
+                return `${super.getName()} 부모 클래스의 메소드를 호출`  //자식에서 부모 클래스의 메소드 호출 시 super 사용
+            }
+        }
+
+        let car = new Car("Hyundai", "Avante", "white");  //인스턴스 car
+        console.log(car.getName());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

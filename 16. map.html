@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+    <script>
+        ['사과', '포도', '바나나'].map(function() {
+            console.log('좋아하는 과일은?');
+            console.log('과일이 좋아!');
+        })
+
+        const arr = [1, 2, 3];
+        const result = arr.map(function(data, idx) {
+            console.log(data*3);
+            console.log(arr[idx]);
+
+            return data * 3;
+        });
+        console.log(result);
+
+        const arr2 = [10, 20, 30];
+        const result2 = arr2.map( data => data * 10);
+        console.log(result2);
+
+        const dataArr = [1, 4, 9, 16, 25];
+        const mathSqurt = dataArr.map(Math.sqrt);
+        console.log(mathSqurt);
+
+        const cat = [
+            {name: 'Jully', age: 21},
+            {name: 'Choko', age: 8},
+            {name: 'CHoly', age: 2}
+        ];
+        const names = cat.map(data => data.name);
+        console.log(names);
+
+        const ages = cat.map(data => data.age);
+        console.log(ages);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

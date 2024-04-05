@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>심볼 객체</title>
+    <script>
+        const obj = {
+            [Symbol('subject')]: 'javascript',
+            [Symbol('credit')]: 3,
+            [Symbol('days')]: 20,
+            subject: 'react'
+        };
+        for (let i in obj) {
+            console.log(`${i} : ${obj[i]}`);  //심볼은 아무것도 출력되지 않음
+        }
+
+        const mySymbol = Symbol();
+        console.log(mySymbol);
+        console.log(typeof mySymbol);
+
+        // 생성된 심벌은 유일무이하다
+        const sym1 = Symbol('club');  //문자열 인수 club
+        const sym2 = Symbol('club');
+        console.log(sym1 === sym2);
+
+        // Symbol.for(인수) : 인수를 심벌 키로 설정
+        const sym3 = Symbol.for('mySymbol');
+        console.log(Symbol.keyFor(sym3));  //저장된 심벌이 키값 출력
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+        const aname = new Array();
+        aname[0] = '김나나';
+        aname[1] = '정미미';
+        aname[2] = '이쥴리';
+        aname[3] = '김민주';
+        aname[4] = '장재희';
+        document.write(`${aname[3]} <br>`);
+        document.write(`${aname} <br>`);
+
+        const days = new Array('일', '월', '화', '수', '목', '금', '토');
+        const today = new Date();
+        const yoil = days[today.getDate()];
+        document.write(`${yoil} <br>`)
+
+        const meney = [100, 100, 200, 50];
+        let total = 0;
+
+        for (let i = 0; i < meney.length; i++) {
+            total += meney[i];
+            document.write(`${total} <br>`);
+        }
+
+        meney[2] = 500;
+        document.write(`${meney[2]}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

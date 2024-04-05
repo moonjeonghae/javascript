@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요일별 이미지 출력하기</title>
+    <script>
+        const day = new Date();
+        // day.setDate(7);
+        const newDay = day.getDay();
+
+        console.log(newDay);
+        
+        document.write(`<h1>현재 날짜와 시간 -> ${day}</h1>`);
+        document.write(`<h2>요일별 이미지 출력하기</h2>`);
+
+        if (newDay >= 1) {
+            document.write(`<img src="./images/img${newDay}.jpg" alt="img">`)
+        } else {
+        document.write(`<img src="./images/img7.jpg" alt="img">`)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

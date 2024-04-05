@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜 정보 객체</title>
+    <script>
+        const today = new Date();
+        const nowMonth = today.getMonth();
+        const nowDate = today.getDate();
+        const nowDay = today.getDay();
+
+        document.write('<h1>오늘 날짜 정보</h1>')
+        document.write(`현재 월 : ${nowMonth + 1}<br>`);
+        document.write(`현재 일 : ${nowDate}<br>`);
+        document.write(`현재 요일 : ${nowDay}`);
+
+        const newDate = new Date();
+        newDate.setMonth(5);
+        newDate.setDate(10);
+        
+        document.write('<h1>새로운 날짜 정보</h1>')
+        document.write(`현재 월 : ${newDate.getMonth() + 1}<br>`);
+        document.write(`현재 일 : ${newDate.getDate()}<br>`);
+        document.write(`현재 요일 : ${newDate.getDay()}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

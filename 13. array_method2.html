@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array_method</title>
+    <script>
+        var theSubway = ['2호선', '9호선', '7호선', '4호선', '3호선'];
+        var newline1 = '6호선';
+        var newline2 = '분당선';
+
+        theSubway.splice(1, 2, '1호선', '5호선');
+        document.write(theSubway, '<br>');
+
+        theSubway.shift();
+        document.write(theSubway, '<br>');
+
+        theSubway.unshift(newline1);
+        document.write(theSubway, '<br>');
+
+        theSubway.pop();
+        document.write(theSubway, '<br>');
+
+        theSubway.push(newline2);
+        document.write(theSubway);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

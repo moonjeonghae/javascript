@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼각형의 넓이를 구하는 객체 생성자 함수를 생성하기</title>
+    <script>
+        const tWidth = prompt('삼각형 밑면의 길이를 입력하세요.');
+        const tHeight = prompt('삼각형 높이를 입력하세요.');
+       
+        function Triangle(width, height) {
+            this.tWidth = width;
+            this.tHeight = height;
+        };
+
+        Triangle.prototype.area = function () {
+            return this.tWidth * this.tHeight / 2;
+        }
+
+        Triangle.prototype.printOut = function() {
+            document.write(`밑변: ${this.tWidth}, 높이: ${this.tHeight}, 넓이: ${this.area()}`);
+        }
+        const triangle = new Triangle(tWidth, tHeight);
+        triangle.printOut();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
