@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+    <script>
+        const data = ['javascript', 20, 30, 'jQuery'];
+
+        const result = data.filter(function(value, idx) {
+            console.log(idx);
+            console.log(value);
+            return typeof value == 'number';  //fiter의 조건
+        })
+        console.log(result);
+
+        // 1~6 숫자 중 3을 초과하는 숫자를 새로운 배열로 추출하기, 화살표 함수로!
+        const num = [1, 2, 3, 4, 5, 6];
+
+        const result2 = num.filter(data => data > 3);
+        console.log(result2);
+
+        const data4 = ['javascript', 20, 30, 40, 'jQuery'];
+        const data4Copy = data4; // 두 변수이 데이터는 공유되어 있음!
+        data4Copy[1] = 200;
+        // console.log(data4);
+        console.log(data4Copy);
+
+        // 배열 데이터의 복제
+        // 펼침 연산자 사용
+        const rightCopy = [...data4];
+        console.log(data4 === rightCopy);
+        rightCopy[3] = 400;
+        console.log(data4[3]);
+        console.log(rightCopy[3]);
+
+        // 배열 데이터 변수에 할당하기
+        const arr = [1, 2];
+        const one = arr[0];
+        const two = arr[1];
+        console.log(one, two);
+
+        // 배열 비구조화(distrectering)로 변수의 데이터 할당하기
+        const arr2 = [3, 4];
+        const [three, four] = arr2;  //디스트럭쳐링 -> 배열 안에 있는 값을 쉽게 추출(두 줄이 한 줄로 표현됨)
+        console.log(three, four);
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
