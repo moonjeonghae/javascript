@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <script>
+    const theText = 'Web js hi city';
+    document.write(theText.bold(), '<br>');  //진하게
+    document.write(theText.link("https://www.naver.com"), '<br>');  //연결
+    document.write(theText.length, '<br>');  //길이
+    document.write(theText.toLowerCase(), '<br>');  //소문자
+    document.write(theText.toUpperCase(), '<br>');  //대문자
+    document.write(theText.indexOf('i'), '<br>');  //i가 있는 index 번호
+    document.write(theText.lastIndexOf('i'), '<br>');  //뒤에서부터 i가 있는 index 번호
+    document.write(theText.charAt(4), '<br>');  //4번방의 문자 추출
+    document.write(theText.substring(4, 6), '<br>');  //4번방부터 6번방 전까지의 문자 추출
+    document.write(theText.substr(10, 3), '<br>');  //10번방부터 3개의 방의 문자 추출
+    document.write(theText.slice(4, 6), '<br>');  //4번방부터 6번방 전까지의 문자 추출 = substring
+    document.write(theText.replace('Web', 'Net'), '<br>');  //지정한 문자를 찾아 변경
+    document.write(theText.concat(' good'), '<br>');  //문자 뒤에 붙이기
+    document.write(theText.split(' '), '<br>');  //공백을 기준으로 나누기
+    document.write(theText.match('js'), '<br>');  //지정한 문자열 찾아 반환
+    document.write(theText.search('hi'), '<br>');  //지정한 문자열 찾아 인덱스 번호 반환
+    
+
+    const data = 'I am a student';
+    const data2 = prompt('찾을 문자열을 입력하세요.')
+    const findTxt = data.indexOf(data2)
+
+    if (findTxt < 0) {
+        document.write('문자열을 찾을 수 없습니다.');
+    } else {
+        document.write('문자열을 찾았습니다.');
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

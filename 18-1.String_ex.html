@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String 예제</title>
+    <script>
+        const userName = prompt('당신의 영문 이름은?');
+        const userTel = prompt('당신의 연락처는?');
+        const upperCase = userName.toUpperCase();
+        document.write(upperCase, '<br>');
+
+        const result = userTel.substring(0, userTel.length - 4) + '****';
+        console.log(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
