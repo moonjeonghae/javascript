@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제5~6</title>
+    <script>
+        // 실습문제5
+        const lunch = ['짜장면', '돈가스', '된장국', '김치찌개', '회덮밥'];
+        let menu;
+
+        let lunchMenu = Math.floor(Math.random() * lunch.length);
+
+        document.write(lunch[lunchMenu], '<br>');
+
+        // 실습문제6
+        const telNum = '010-9876-1234';
+        // const result = telNum.substring(0,4) + '****' + telNum.substring(8,telNum.length + 1);
+        // const result = `${telNum.substr(0,3)}-****-${telNum.substr(9,4)}`;
+        const result = telNum.replace(telNum.substr(4,4), '****');
+        document.write(result, "<br>");
+
+        const image = 'images/bnt_out.jpg';
+        const result2 = image.replace('out', 'over');
+        document.write(result2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

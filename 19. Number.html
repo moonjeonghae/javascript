@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+    <script>
+        const num = 123.456;
+        console.log(num.toFixed());
+        console.log(num.toFixed(1));
+        console.log(num.toFixed(2));
+
+        const num2 = 12;
+        console.log(num2.toString(2));
+        console.log(num2.toString(16));  //0~f까지 표기 (16진수)
+
+        // 소수점 계산에 대한 문제 해결법
+        console.log(46000 * 0.7);
+        console.log(46000 * (0.7 * 10) / 10);
+
+        // 정수형 integer (실수형 float)
+        const num3 = 100.29;
+        const num4 = '50';
+        const num5 = '200.5';
+        console.log(num3 + parseInt(num4));  //parseInt() => 숫자로 전환
+        console.log(parseInt(num4) + Number(num5));  //250.5
+        console.log(parseInt(num4) + parseInt(num5));  //250
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
