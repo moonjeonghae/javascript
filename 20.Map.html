@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <script>
+        const season = new Map(
+            [
+                ['봄', 1],  //속성1 [키,값]
+                ['여름', 2],  //속성2
+                ['가을', 3],  //속성3
+                ['겨울', 4],  //속성4
+            ]
+        )
+        console.log(season);
+
+        const lesson = new Map();
+        lesson.set('html', 1);  //키, 값
+        lesson.set('css', 2);
+        lesson.set('javascript', 3);
+        lesson.set('jQuary', 4);
+        console.log(lesson);
+
+        // 키값 취득
+        console.log(season.size);
+
+        // 속성 개수
+        console.log(lesson.get('html'));
+        console.log(lesson.get('javascript'));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
